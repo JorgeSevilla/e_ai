@@ -1,7 +1,6 @@
 package com.eai.model;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,7 +19,7 @@ public class Endereco implements Serializable{
 	private long id;
 	
 	private String bairro;
-	private BigDecimal cep;
+	private String cep;
 	private String logradouro;
 	private String complemento;
 	
@@ -36,10 +35,10 @@ public class Endereco implements Serializable{
 	public void setBairro(String bairro) {
 		this.bairro = bairro;
 	}
-	public BigDecimal getCep() {
+	public String getCep() {
 		return cep;
 	}
-	public void setCep(BigDecimal cep) {
+	public void setCep(String cep) {
 		this.cep = cep;
 	}
 	public String getLogradouro() {
