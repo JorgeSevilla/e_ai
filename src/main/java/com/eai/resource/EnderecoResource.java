@@ -58,4 +58,10 @@ public class EnderecoResource {
 	public Endereco atualizaEndereco(@RequestBody @Validated Endereco endereco) {
 		return enderecoRepository.save(endereco);
 	}
+	
+	@GetMapping("/endeceros/{cep}")
+	@ApiOperation("Busca um endereço pelo CEP")
+	public Endereco listarEndereoCEP(@PathVariable(value = "cep") long cep) {
+		return enderecoRepository.findById(cep);
+	}
 }

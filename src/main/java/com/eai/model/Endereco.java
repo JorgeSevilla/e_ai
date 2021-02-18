@@ -19,7 +19,7 @@ public class Endereco implements Serializable{
 	private long id;
 	
 	private String bairro;
-	private String cep;
+	private long cep;
 	private String logradouro;
 	private String complemento;
 	
@@ -35,10 +35,10 @@ public class Endereco implements Serializable{
 	public void setBairro(String bairro) {
 		this.bairro = bairro;
 	}
-	public String getCep() {
+	public long getCep() {
 		return cep;
 	}
-	public void setCep(String cep) {
+	public void setCep(long cep) {
 		this.cep = cep;
 	}
 	public String getLogradouro() {
