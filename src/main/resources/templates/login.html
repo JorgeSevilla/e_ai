@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>e-ai</title>
+<link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+	<div align="center">
+		<h3>E-AI</h3>
+		<p th:if="${param.error}" th:text="${errorMsg}" class="error"></p>
+		<form th:action="@{/api/login}" method="POST">
+			<fieldset>
+				<label class="etiqueta">Usuario :</label> <input type="text"
+					name="username" /> <br /> <br /> <label class="etiqueta">Senha:</label>
+				<input type="password" name="password" /> <br /> <br /> <input
+					type="submit" value="Acesso" />
+			</fieldset>
+		</form>
+	</div>
+</body>
+</html>
